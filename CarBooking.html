@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baan Pai Mai</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script type="module" src="../src/firebase.js"></script>
+</head>
+<body>
+
+  <header class="fixed top-0 left-0 w-full bg-amber-100 shadow-md z-50">
+
+  <div class="px-5 md:px-10 py-4">
+
+    <div class="flex items-center justify-between">
+
+      <img src="../LOGO.png" class="w-20 md:w-28">
+
+      <a href="http://127.0.0.1:5500/src/index.html" class="font-serif text-lg font-bold text-yellow-900 
+      hover:text-yellow-500 transition duration-300 active:scale-95 hover:scale-110"><img src="../home.png" class="w-5 md:w-7"></a>
+        </div>
+      </div>
+
+</header>
+
+
+<div id="result"></div>
+    </header>
+    
+    <p class="pt-10"></p>
+    <p class="pt-10"></p>
+
+<div class="min-h-screen flex items-center justify-center p-4">
+  <div class="w-full max-w-6xl bg-white rounded-2xl shadow-lg overflow-hidden grid md:grid-cols-2">
+    
+    <div class="drop-shadow-lg">
+      <img src="../99.jpg" class="w-full h-full object-cover">
+    </div>
+
+    <div class="p-8">
+      <h2 class="text-2xl font-serif mb-1">Reservation</h2>
+      <p class="text-gray-400 text-sm mb-6">เลือกวันและเวลาที่ต้องการ</p>
+
+<div class="mb-6">
+  <label class="block text-sm font-medium mb-2">
+    เลือกวันที่
+  </label>
+
+  <input
+    id="date"
+    type="date"
+    class="w-full border rounded-lg px-4 py-2 focus:border-amber-500 outline-none">
+</div>
+
+      <div class="mb-6">
+  <label class="block text-sm font-medium mb-3">ช่วงเวลา</label>
+
+  <div class="grid grid-cols-3 gap-3">
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="09:00">
+    09:00
+    </button>
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="10:00">
+    10:00
+    </button>
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="11:00">
+    11:00
+    </button>
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="13:00">
+    13:00
+    </button>
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="14:00">
+    14:00
+    </button>
+
+    <button class="time-btn active:scale-95 rounded-full py-2 text-sm bg-amber-200 hover:bg-amber-800 duration-300 hover:text-white"
+    data-time="15:00">
+    15:00
+    </button>
+
+  </div>
+</div>
+
+<div class="mb-6">
+  <label class="block text-sm font-medium mb-2">
+    ชื่อ-นามสกุล
+  </label>
+
+  <input
+    id="name"
+    type="text"
+    placeholder="กรอกชื่อของคุณ"
+    class="w-full border-b py-2 outline-none focus:border-amber-500">
+</div>
+
+     <div class="mb-8">
+  <label class="block text-sm font-medium mb-2">
+    เบอร์โทร
+  </label>
+
+  <input
+    id="phone"
+    type="tel"
+    placeholder="08X-XXX-XXXX"
+    class="w-full border-b py-2 outline-none focus:border-amber-500">
+</div>
+
+      <button id="confirmBtn" class="active:scale-95 w-full bg-amber-200 hover:text-amber-50 py-3 rounded-full hover:bg-amber-800 duration-300 transition">
+        ยืนยันการจอง
+      </button>
+    </div>
+
+  </div>
+</div>
+
+<footer id="3" class="bg-amber-100 text-yellow-900 mt-20">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 md:grid-cols-3 gap-8"><div>
+
+            <h2 class="text-2xl font-serif font-bold mb-4">
+                BAAN PAI MAI
+            </h2>
+
+            <p class="text-lg">
+                สัมผัสบรรยากาศธรรมชาติ  
+                คาเฟ่สไตล์อบอุ่น เหมาะสำหรับพักผ่อน
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-serif font-bold mb-4">
+                Opening Hours
+            </h2>
+
+            <p class="text-lg">
+                จันทร์ - อาทิตย์
+            </p>
+
+            <p class="text-lg">
+                09:00 น. - 18:00 น.
+            </p>
+        </div>
+
+        <div>
+            <h2 class="text-2xl font-serif font-bold mb-4">
+                Contact
+            </h2>
+
+            <p class="text-lg">
+                โทร: 099-9999999
+            </p>
+
+            <p class="text-lg">
+                Email: m0896217980@gmail.com
+            </p>
+
+            <p class="text-lg">
+                Facebook: บ้านปาย-หาดโนนทันเขื่อนอุบลรัตน์
+            </p>
+        </div>
+
+    </div>
+
+    <div class="border-t border-yellow-900"></div>
+
+    <div class="text-center py-4 text-lg">
+        © 2026 BAAN PAI MAI. All rights reserved.
+    </div>
+</footer>
+
+</body>
+</html>
